@@ -1,11 +1,14 @@
 <?php
 
-final class HFMMenu_main {
+final class
+HFMMenu_main {
 
     /**
      * @return void
      */
-    static function CBInstall_install(): void {
+    static function
+    CBInstall_install(
+    ): void {
         $updater = CBModelUpdater::fetch(
             (object)[
                 'className' => 'CBMenu',
@@ -16,17 +19,30 @@ final class HFMMenu_main {
         );
 
         CBModelUpdater::save($updater);
+
+        CB_StandardPageFrame::setDefaultMainMenuModelCBID(
+            HFMMenu_main::ID()
+        );
     }
+    /* CBInstall_install() */
+
+
 
     /**
      * @return [string]
      */
-    static function CBInstall_requiredClassNames(): array {
+    static function
+    CBInstall_requiredClassNames(
+    ): array {
         return [
+            'CB_StandardPageFrame',
             'CBMenu',
             'CBModelUpdater',
         ];
     }
+    /* CBInstall_requiredClassNames() */
+
+
 
     /**
      * @return ID

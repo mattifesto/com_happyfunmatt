@@ -1,6 +1,23 @@
 <?php
 
-final class HFMPageSettings {
+final class
+HFMPageSettings {
+
+    /* -- CBHTMLOutput interfaces -- */
+
+
+
+    /**
+     * @return string
+     */
+    static function
+    CBHTMLOutput_replacementClassNameForPageSettings(
+    ): string {
+        return 'CB_StandardPageSettings';
+    }
+    /* CBHTMLOutput_replacementClassNameForPageSettings() */
+
+
 
     /**
      * @return void

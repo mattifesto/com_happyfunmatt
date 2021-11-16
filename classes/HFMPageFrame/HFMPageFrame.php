@@ -1,6 +1,7 @@
 <?php
 
-final class HFMPageFrame {
+final class
+HFMPageFrame {
 
     /**
      * @return void
@@ -32,4 +33,16 @@ final class HFMPageFrame {
             'className' => 'HFMPageFooterView',
         ]);
     }
+
+
+    /**
+     * @return string
+     */
+    static function
+    CBPageFrame_replacementPageFrameClassName(
+    ): string {
+        return 'CB_StandardPageFrame';
+    }
+    /* CBPageFrame_replacementPageFrameClassName() */
+
 }
